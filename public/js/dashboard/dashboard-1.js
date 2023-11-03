@@ -2,7 +2,7 @@
 
 (function ($) {
 	/* "use strict" */
-
+	var loaded = false;
 	var dlabChartlist = function () {
 
 		var screenWidth = $(window).width();
@@ -690,15 +690,19 @@
 
 
 			load: function () {
-				donutChart1();
-				reservationChart();
-				chartBarRunning();
-				NewCustomers();
-				pieChart1();
-				columnChart();
-				donutChart2();
-				activeUser();
-				//activeUserchart();
+				if (!loaded) {
+					loaded = true;
+					donutChart1();
+					reservationChart();
+					chartBarRunning();
+					NewCustomers();
+					pieChart1();
+					columnChart();
+					donutChart2();
+					activeUser();
+					//activeUserchart();
+				}
+
 			},
 
 			resize: function () {
@@ -709,11 +713,8 @@
 
 
 
-	// jQuery(window).on('load',function(){
-
-
-	// });
 	setTimeout(function () {
+
 		dlabChartlist.load();
 	}, 1000);
 

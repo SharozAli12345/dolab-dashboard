@@ -5,11 +5,9 @@ import DashboardLayout from './layout/dashboardLayout';
 
 function App() {
   return (
-    <div className="App">
-      <DashboardLayout>
-        <Dashboard />
-      </DashboardLayout>
-    </div>
+    <DashboardLayout>
+      <Dashboard />
+    </DashboardLayout>
   );
 }
 

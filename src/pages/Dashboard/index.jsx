@@ -3,10 +3,7 @@ import React, { useEffect } from "react";
 function Dashboard(props) {
   useEffect(() => {
     // Define the array of script URLs you want to load
-    const scriptUrls = [
-      "vendor/apexchart/apexchart.js",
-      "js/dashboard/dashboard-1.js",
-    ];
+    const scriptUrls = ["js/dashboard/dashboard-1.js"];
 
     scriptUrls.forEach((scriptUrl) => {
       const script = document.createElement("script");
