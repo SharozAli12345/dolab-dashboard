@@ -33,7 +33,7 @@ export default function Invoice(props) {
               Download PDF
             </button>
           </h4>
-          <a href="javascript:voiud(0);">
+          <a href="javascript:void(0);">
             <div className="card p-3 me-2 mb-0 filter">
               <svg
                 width={20}
