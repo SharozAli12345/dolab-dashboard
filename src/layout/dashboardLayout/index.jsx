@@ -3,17 +3,7 @@ import { Link } from "react-router-dom";
 
 function DashboardLayout({ children }) {
   useEffect(() => {
-    // Define the array of script URLs you want to load
-    const scriptUrls = [
-      // "vendor/apexchart/apexchart.js",
-      "js/custom.min.js",
-      "js/dlabnav-init.js",
-
-      // "vendor/chart.js/Chart.bundle.min.js",
-      // "js/dashboard/dashboard-1.js",
-      // "js/dashboard/balance.js",
-
-    ];
+    const scriptUrls = ["js/custom.min.js", "js/dlabnav-init.js"];
 
     scriptUrls.forEach((scriptUrl) => {
       const script = document.createElement("script");
@@ -2218,17 +2208,21 @@ function DashboardLayout({ children }) {
         </div>
         <div className="content-body">
           {/* row */}
-          <div className="container-fluid" >
-            {children}
-          </div>
+          <div className="container-fluid">{children}</div>
         </div>
         <div class="footer out-footer">
           <div class="copyright">
-            <p>Copyright © Designed &amp; Developed by <a href="https:// DexignZone.com/" target="_blank"> DexignZone</a> 2022</p>
+            <p>
+              Copyright © Designed &amp; Developed by{" "}
+              <a href="https:// DexignZone.com/" target="_blank">
+                {" "}
+                DexignZone
+              </a>{" "}
+              2022
+            </p>
           </div>
         </div>
       </div>
-
     </>
   );
 }
